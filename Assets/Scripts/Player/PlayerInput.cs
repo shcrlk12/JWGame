@@ -19,10 +19,18 @@ public class PlayerInput : MonoBehaviour
 
     void GetInput()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        MoveInput = new Vector3(x, 0, z);
+        MoveInput = Vector3.zero;
 
+        if (Input.GetKey(KeyCode.W))
+            MoveInput.z += 1;
+        if (Input.GetKey(KeyCode.S))
+            MoveInput.z -= 1;
+        if (Input.GetKey(KeyCode.A))
+            MoveInput.x -= 1;
+        if (Input.GetKey(KeyCode.D))
+            MoveInput.x += 1;
+
+        E = Input.GetKey(KeyCode.E);
         Jump = Input.GetButton("Jump");
         Dash = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
     }

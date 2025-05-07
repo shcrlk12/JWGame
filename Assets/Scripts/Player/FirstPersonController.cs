@@ -12,7 +12,6 @@ public class FirstPersonController : CharacterController
     protected override void Update()
     {
         base.Update();
-        base.Move();
     }
 
     void OnCollisionEnter(Collision collision)
