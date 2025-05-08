@@ -24,6 +24,7 @@ public class Weapon : MonoBehaviour
     public virtual void AttachWeaponToParent(GameObject gameObject)
     {
         transform.SetParent(gameObject.transform);
+        transform.localPosition = Vector3.zero;
 
         if (rigidbody != null)
         {

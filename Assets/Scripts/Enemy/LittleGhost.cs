@@ -1,5 +1,9 @@
-﻿public class LittleGhost : Enemy
+﻿using UnityEngine;
+
+public class LittleGhost : Enemy
 {
+    public GameObject Eyes;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected override void Start()
     {

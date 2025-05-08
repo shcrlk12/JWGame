@@ -1,14 +1,18 @@
-﻿using UnityEngine;
-using UnityEngine.XR;
+﻿using System;
+using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public PlayerInput playerInput;
+    public PlayerInput PlayerInput;
     private Rigidbody playerRigidbody;
     public float Speed;
     public float DashSpeed;
     public bool isGround;
     public float JumpPower;
+    public bool isChatchObject;
+    public GameObject Eye, Hand;
+    public Weapon Weapon;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
@@ -20,31 +24,56 @@ public class CharacterController : MonoBehaviour
     {
         Move();
         Jump();
-        E();
+        CatchObejct();
     }
 
     protected virtual void Move()
     {
-        float speed = playerInput.Dash ? DashSpeed : Speed;
+        float speed = PlayerInput.Dash ? DashSpeed : Speed;
 
-        var vector = new Vector3(playerInput.MoveInput.x, 0, playerInput.MoveInput.z).normalized;
+        var vector = new Vector3(PlayerInput.MoveInput.x, 0, PlayerInput.MoveInput.z).normalized;
 
         playerRigidbody.transform.position += vector * speed * Time.deltaTime;
     }
 
     protected virtual void Jump()
     {
-        if (playerInput.Jump)
+        if (PlayerInput.Jump)
         {
             playerRigidbody.AddForce(new Vector3(0, JumpPower, 0));
         }
     }
 
-    protected virtual void E()
+    protected virtual void CatchObejct()
     {
-        if (playerInput.E)
+        if (PlayerInput.E)
         {
-            playerRigidbody.AddForce(new Vector3(0, JumpPower, 0));
+            if (isChatchObject == true)
+            {
+                //Throw
+                Weapon.ThrowWeapon();
+                isChatchObject = false;
+            }
+            else if (isChatchObject == false)
+            {
+                // Catch
+                RaycastHit hit;
+                var isObejct = Physics.Raycast(Eye.transform.position, Eye.transform.forward, out hit, 15f, 1 << (int)Layer.Object);
+
+                if (isObejct == true && hit.collider != null)
+                {
+                    Weapon = hit.collider.gameObject.GetComponent<Weapon>();
+                    if (Weapon != null)
+                    {
+                        Weapon.AttachWeaponToParent(Hand);
+                        isChatchObject = true;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Weapon is null");
+                    }
+                }
+            }
         }
     }
 
