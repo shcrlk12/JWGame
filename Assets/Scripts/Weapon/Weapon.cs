@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public virtual void ThrowWeapon()
+    public virtual void ThrowWeapon(float throwPower)
     {
         // 월드 부모로 설정
         transform.SetParent(worldTransform);
@@ -42,7 +42,7 @@ public class Weapon : MonoBehaviour
             rigidbody.isKinematic = false; // 던지면 물리적 영향을 받게 설정
 
             // 던지는 힘을 추가 (transform.forward 대신에 원하는 방향을 설정할 수 있음)
-            rigidbody.AddForce(transform.forward * throwForce, ForceMode.Impulse); // 던지는 힘을 추가
+            rigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse); // 던지는 힘을 추가
         }
     }
 

@@ -4,7 +4,15 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - weapon
+  - NormalEnemy
+  - BossEnemy
+  - NPC
+  - Weapon
+  - Checkpoint
+  - Hazard
+  - Projectile
+  - Interactable
+  - Friendly
   layers:
   - Default
   - TransparentFX
@@ -12,15 +20,15 @@ TagManager:
   - 
   - Water
   - UI
+  - Player
+  - Enemy
+  - Environment
+  - Ground
+  - Trigger
+  - Projectile
+  - Pickup
+  - Usable
   - Object
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

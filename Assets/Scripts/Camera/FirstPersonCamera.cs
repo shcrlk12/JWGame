@@ -12,7 +12,7 @@ class FirstPersonCamera : MonoBehaviour
     {
     }
 
-    public void AttachWeaponToParent(GameObject gameObject)
+    public void AttachToParent(GameObject gameObject)
     {
         transform.SetParent(gameObject.transform);
         transform.localPosition = Vector3.zero;

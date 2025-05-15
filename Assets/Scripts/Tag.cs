@@ -1,9 +1,30 @@
-﻿public enum Tag
+﻿using System;
+
+public enum Tag
 {
-    Player = 0,        // "Player"
-    Enemy = 1,         // "Enemy"
-    Interactable = 2,  // "Interactable"
-    NPC = 3,           // "NPC"
-    Ground = 4,        // "Ground"
-    Object = 5,        // "Object"
+    Untagged,
+    Respawn,
+    Finish,
+    EditorOnly,
+    MainCamera,
+    Player,
+    GameController,
+    NormalEnemy,
+    BossEnemy,
+    NPC,
+    Weapon,
+    Checkpoint,
+    Hazard,
+    Projectile,
+    Interactable,
+    Friendly
+}
+
+public static class TagExtensions
+{
+    // Enum 값에 대한 설명을 반환하는 메서드
+    public static string GetName(this Tag tag)
+    {
+        return Enum.GetName(typeof(Tag), tag);
+    }
 }

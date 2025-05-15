@@ -3,7 +3,47 @@ guid: 43936e8c917a77249a2b1ffa14458b0f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 8ff5d9c25d69fa849975570d213ab035, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 73f0a5cfca9a09149a64840f8d09cdee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cheese
+    second: {fileID: 2100000, guid: 443a9a61e76f1c74eaba07097fed4ed3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye
+    second: {fileID: 2100000, guid: 93a67330592081a4985cb5ba34f8b581, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orange_body
+    second: {fileID: 2100000, guid: 3c58d0aa1d622774fae9f9c8d62a4e87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pattie
+    second: {fileID: 2100000, guid: 95ef54eddedbc8742900ebb5d322fc5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teeth
+    second: {fileID: 2100000, guid: be5c77462da20864d9e6b70778ea3f9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vegitable
+    second: {fileID: 2100000, guid: 66232e9257f62434b9d55e7d450ba104, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

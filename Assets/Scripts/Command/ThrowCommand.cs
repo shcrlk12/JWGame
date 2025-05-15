@@ -10,6 +10,6 @@
 
     public void Execute()
     {
-        _weapon.ThrowWeapon();
+        _weapon.ThrowWeapon(5);
     }
 }

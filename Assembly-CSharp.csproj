@@ -62,21 +62,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Command\ThrowCommand.cs" />
+    <Compile Include="Assets\Scripts\NonStaticObject.cs" />
+    <Compile Include="Assets\Scripts\TimeChecker.cs" />
     <Compile Include="Assets\Scripts\Layer.cs" />
+    <Compile Include="Assets\Scripts\EnergyChecker.cs" />
     <Compile Include="Assets\Scripts\Enemy\LittleGhost.cs" />
+    <Compile Include="Assets\Scripts\Clock.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponStatus.cs" />
-    <Compile Include="Assets\Scripts\Player\CharacterController.cs" />
+    <Compile Include="Assets\Scripts\SoulHolder.cs" />
+    <Compile Include="Assets\Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
     <Compile Include="Assets\Scripts\Command\IWeaponCommand.cs" />
+    <Compile Include="Assets\Scripts\Weapon\FireMagic.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
+    <Compile Include="Assets\Scripts\Player\BaseController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Camera\FirstPersonCamera.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BossGhost.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Salt.cs" />
     <Compile Include="Assets\Scripts\Weapon\NormalObject.cs" />
     <Compile Include="Assets\Scripts\Tag.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Command\GrabCommand.cs" />
+    <Compile Include="Assets\Scripts\GameState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

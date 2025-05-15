@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FirstPersonController : CharacterController
+public class FirstPersonController : BaseController
 {
     private float xRotation = 0f;
     private FirstPersonCamera _firstPersonCamera;
@@ -12,7 +12,8 @@ public class FirstPersonController : CharacterController
         Cursor.lockState = CursorLockMode.Locked;
 
         _firstPersonCamera = Camera.main.GetComponent<FirstPersonCamera>();
-        _firstPersonCamera.AttachWeaponToParent(Eye);
+        _firstPersonCamera.AttachToParent(Eye);
+
     }
 
     // Update is called once per frame

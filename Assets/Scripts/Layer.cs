@@ -1,8 +1,26 @@
 ﻿public enum Layer
 {
-    Player = 8,    // 8번 레이어 (Player)
-    Enemy = 9,     // 9번 레이어 (Enemy)
-    Ground = 10,   // 10번 레이어 (Ground)
-    UI = 5,        // 5번 레이어 (UI)
-    Object = 8
+    Default = 0,
+    TransparentFX = 1,
+    IgnoreRaycast = 2,
+    Water = 4,
+    UI = 5,
+    Player = 6,
+    Enemy = 7,
+    Environment = 8,
+    Ground = 9,
+    Trigger = 10,
+    Projectile = 11,
+    Pickup = 12,
+    Usable = 13,
+    Object = 14
+}
+
+public static class LayerExtensions
+{
+    // Enum 값에 대한 설명을 반환하는 메서드
+    public static int GetLayerMask(this Layer layer)
+    {
+        return 1 << (int)layer;
+    }
 }
